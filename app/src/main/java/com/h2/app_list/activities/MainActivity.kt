@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val appList: ArrayList<InstalledApp> = getNonSystemApps();
         val rcv = findViewById<RecyclerView>(R.id.app_list)
-        val appListAdapter = AppListAdapter(appList)
+        val appListAdapter = AppListAdapter(appList,applicationContext)
         rcv.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = appListAdapter
